@@ -12,3 +12,7 @@ Desenvolvimento de uma calculadora capaz de executar as 4 principais operações
 
 21/09/2023 - Commit 4
     - Aplicação dos elementos JavaScript, com as funcionalidades da calculadora.
+
+21/09/2023 - Commit 5
+    - Criação de placeholder nos inputs.
+    - Adição de um if para caso o valor fornecido não seja numérico.
