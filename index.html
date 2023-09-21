@@ -8,8 +8,8 @@
 </head>
 <body>
     <form action="" id="formulario" class="form">
-        <strong>Valor 1: </strong><input type="text" name="" id="valor1" class="input"><br>
-        <strong>Valor 2: </strong><input type="text" name="" id="valor2" class="input"><br>
+        <strong>Valor 1: </strong><input type="text" name="" id="n1" class="input"><br>
+        <strong>Valor 2: </strong><input type="text" name="" id="n2" class="input"><br>
 
         <strong>Opções: </strong><br>
 
@@ -22,7 +22,39 @@
 
         <input type="text" name="" id="resultado" class="input" readonly><br>
         
-        <button id="btn">Calcular</button>
+        <button id="btn" type="button">Calcular</button>
     </form>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const resultInput = document.getElementById("resultado");
+
+        btn.addEventListener("click", function() {
+            const valor1 = parseInt(document.getElementById("n1").value);
+            const valor2 = parseInt(document.getElementById("n2").value);
+            
+            const soma = document.getElementById("soma");
+            const subtracao = document.getElementById("subtracao");
+            const multiplicacao = document.getElementById("multiplicacao");
+            const divisao = document.getElementById("divisao");
+
+            if (soma.checked) {
+                const resultado = valor1 + valor2;
+                resultInput.value = resultado;
+            }
+            else if (subtracao.checked) {
+                const resultado = valor1 - valor2;
+                resultInput.value = resultado;
+            }
+            else if (multiplicacao.checked) {
+                const resultado = valor1 * valor2;
+                resultInput.value = resultado;
+            }
+            else if (divisao.checked) {
+                const resultado = valor1 / valor2;
+                resultInput.value = resultado;
+            }
+        });
+    </script>
 </body>
 </html>
